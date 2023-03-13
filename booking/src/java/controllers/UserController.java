@@ -113,7 +113,7 @@ public class UserController extends HttpServlet {
             HttpSession session = request.getSession();
             User user = (User) session.getAttribute("user");
             if (user == null) {
-                response.sendRedirect("/WebsiteOrderStadium/user/login.do");
+                response.sendRedirect("/booking/user/login.do");
             } else {
                 SimpleDateFormat smt = new SimpleDateFormat("HH:mm:ss");
                 BookingDAO bd = new BookingDAO();
@@ -200,9 +200,9 @@ public class UserController extends HttpServlet {
                 session.setAttribute("user", user);
                 //response.sendRedirect("/WebsiteOrderStadium/home/index.do");
                 if (pitchID != null) {
-                    response.sendRedirect("/WebsiteOrderStadium/stadium/detail.do?pitchID=" + pitchID);
+                    response.sendRedirect("/booking/stadium/detail.do?pitchID=" + pitchID);
                 } else {
-                    response.sendRedirect("/WebsiteOrderStadium/home/index.do");
+                    response.sendRedirect("/booking/home/index.do");
                 }
                 session.removeAttribute("pitchID");
             } else {
@@ -211,13 +211,13 @@ public class UserController extends HttpServlet {
                     session.setAttribute("user", u);
                     //response.sendRedirect("/WebsiteOrderStadium/home/index.do");
                     if (pitchID != null) {
-                        response.sendRedirect("/WebsiteOrderStadium/stadium/detail.do?pitchID=" + pitchID);
+                        response.sendRedirect("/booking/stadium/detail.do?pitchID=" + pitchID);
                     } else {
-                        response.sendRedirect("/WebsiteOrderStadium/home/index.do");
+                        response.sendRedirect("/booking/home/index.do");
                     }
                     session.removeAttribute("pitchID");
                 } else {
-                    response.sendRedirect("/WebsiteOrderStadium/user/login.do");
+                    response.sendRedirect("/booking/user/login.do");
                 }
             }
             //response.sendRedirect("/WebsiteOrderStadium/home/index.do");
@@ -246,7 +246,7 @@ public class UserController extends HttpServlet {
         try {
             HttpSession session = request.getSession();
             session.invalidate();
-            response.sendRedirect("/WebsiteOrderStadium/home/index.do");
+            response.sendRedirect("/booking/home/index.do");
         } catch (IOException ex) {
             Logger.getLogger(UserController.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -386,14 +386,14 @@ public class UserController extends HttpServlet {
                     }
 
                     if (pitchID != null) {
-                        response.sendRedirect("/WebsiteOrderStadium/stadium/detail.do?pitchID=" + pitchID);
+                        response.sendRedirect("/booking/stadium/detail.do?pitchID=" + pitchID);
                     } else {
                         if (user.getRoleID().equals("OW")) {
-                            response.sendRedirect("/WebsiteOrderStadium/owner/index.do");
+                            response.sendRedirect("/booking/owner/index.do");
                         } else if (user.getRoleID().equals("AD")) {
-                            response.sendRedirect("/WebsiteOrderStadium/admin/index.do");
+                            response.sendRedirect("/booking/admin/index.do");
                         } else {
-                            response.sendRedirect("/WebsiteOrderStadium/home/index.do");
+                            response.sendRedirect("/booking/home/index.do");
                         }
                     }
                 } else {
@@ -409,14 +409,14 @@ public class UserController extends HttpServlet {
                         response.addCookie(cookiePass);
                         response.addCookie(cookieRemember);
                         if (pitchID != null) {
-                            response.sendRedirect("/WebsiteOrderStadium/stadium/detail.do?pitchID=" + pitchID);
+                            response.sendRedirect("/booking/stadium/detail.do?pitchID=" + pitchID);
                         } else {
                             if (user.getRoleID().equals("OW")) {
-                                response.sendRedirect("/WebsiteOrderStadium/owner/index.do");
+                                response.sendRedirect("/booking/owner/index.do");
                             } else if (user.getRoleID().equals("AD")) {
-                                response.sendRedirect("/WebsiteOrderStadium/admin/index.do");
+                                response.sendRedirect("/booking/admin/index.do");
                             } else {
-                                response.sendRedirect("/WebsiteOrderStadium/home/index.do");
+                                response.sendRedirect("/booking/home/index.do");
                             }
                         }
                     }
@@ -535,7 +535,7 @@ public class UserController extends HttpServlet {
             Comment comment = new Comment(commentID, pitchID, userID, date, content, Integer.parseInt(rating));
             if (ud.insertComment(comment)) {
                 pd.updatetEstimation(pitchRating, pitchID);
-                response.sendRedirect("/WebsiteOrderStadium/stadium/detail.do?pitchID=" + pitchID);
+                response.sendRedirect("/booking/stadium/detail.do?pitchID=" + pitchID);
             }
         } catch (SQLException ex) {
             Logger.getLogger(UserController.class.getName()).log(Level.SEVERE, null, ex);

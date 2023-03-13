@@ -120,7 +120,7 @@
                                 <hr class="my-4">
                                     </form>
                                     <div class="d-grid mb-2">
-                                        <a href="https://accounts.google.com/o/oauth2/auth?scope=email%20profile%20openid&redirect_uri=http://localhost:8084/WebsiteOrderStadium/user/loginGoogle.do&response_type=code
+                                        <a href="https://accounts.google.com/o/oauth2/auth?scope=email%20profile%20openid&redirect_uri=http://localhost:8084/booking/user/loginGoogle.do&response_type=code
                                            &client_id=292534222114-jqbb85po67c77jmb7e648o095mcqp0n6.apps.googleusercontent.com&approval_prompt=force">
                                             <button class="btn btn-google btn-login text-uppercase fw-bold" type="submit">
                                                 <i class="fab fa-google me-2"></i> Đăng nhập bằng google
