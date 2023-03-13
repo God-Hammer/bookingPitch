@@ -25,15 +25,16 @@
     <div class="container px-5">
         <div class="row gx-5 align-items-center">
             <div class="col-lg-6">
-                <div class="p-5"><img class="img-fluid rounded-circle" src="${pageContext.request.contextPath}/images/pic2.jpg" alt="..." /></div>
+                <div class="p-5"><img class="img-fluid rounded-circle" src="${pageContext.request.contextPath}/images/intro.jpg" alt="..." /></div>
             </div>
             <div class="col-lg-6">
                 <div class="p-5">
-                    <h2 class="display-4 text-primary fw-bolder">GROUP4</h2>
-                    <p class="fst-italic fw-bolder">  Phạm Hoàng Nam </p>
+                    <h2 class="display-4 text-primary fw-bolder">GROUP</h2>
+                    <p class="fst-italic fw-bolder">  Đào Minh Trí </p>
                     <p class="fst-italic fw-bolder"> Nguyễn Huỳnh Minh Khôi </p>
-                    <p class="fst-italic fw-bolder"> Phạm Cao Hoàng Minh </p>
-                    <p class="fst-italic fw-bolder"> Lê Quốc Khánh </p>
+                    <p class="fst-italic fw-bolder"> Trần Thế Quang </p>
+                    <p class="fst-italic fw-bolder"> Nguyễn Tấn Trung </p>
+                    <p class="fst-italic fw-bolder"> Nguyễn Mai </p>
                 </div>
             </div>
         </div>
