@@ -12,10 +12,7 @@ import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.fluent.Form;
 import org.apache.http.client.fluent.Request;
 
-/**
- *
- * @author SE150853 Nguyen Huynh Minh Khoi
- */
+
 public class GoogleAccess {
 
     public static String getToken(String code) throws ClientProtocolException, IOException {

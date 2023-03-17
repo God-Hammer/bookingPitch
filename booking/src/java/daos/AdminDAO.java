@@ -15,10 +15,7 @@ import models.Booking;
 import models.User;
 import utils.DBUtils;
 
-/**
- *
- * @author SE150853 Nguyen Huynh Minh Khoi
- */
+
 public class AdminDAO {
 
     private static final String GET_USER_FOR_BECOMING_OWNER = "SELECT * FROM tblUser where OwnerStatus=1";

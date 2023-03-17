@@ -1,8 +1,4 @@
-<%-- 
-    Document   : about
-    Created on : May 15, 2022, 3:20:46 PM
-    Author     : SE150924-Pham Hoang Nam
---%>
+
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <section id="scroll">

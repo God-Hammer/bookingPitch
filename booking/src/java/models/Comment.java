@@ -7,10 +7,7 @@ package models;
 
 import java.util.Date;
 
-/**
- *
- * @author SE150853 Nguyen Huynh Minh Khoi
- */
+
 public class Comment {
     private String commentID;
     private String pitchID;

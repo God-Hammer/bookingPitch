@@ -32,10 +32,7 @@ import models.Pitch;
 import models.User;
 import models.Ward;
 
-/**
- *
- * @author DELL
- */
+
 @WebServlet(name = "HomeController", urlPatterns = {"/home"})
 public class HomeController extends HttpServlet {
 
@@ -88,58 +85,7 @@ public class HomeController extends HttpServlet {
             session.removeAttribute("listP1");
             session.removeAttribute("listCP1");
 
-//            int pageSize = 8;//Kich thuoc trang                        
-//
-//            //Xac dinh so thu tu cua trang hien tai
-//            Integer page = (Integer) session.getAttribute("page");
-//            if (page == null) {
-//                page = 1;
-//            }
-//
-//            //Xac dinh tong so trang
-//            Integer totalPage = (Integer) session.getAttribute("totalPage");
-//            int count = pd.getNumberOfPitch();//Dem so luong records
-//            totalPage = (int) Math.ceil((double) count / pageSize);//Tinh tong so trang
-//
-//            String op = request.getParameter("op");
-//            if (op == null) {
-//                op = "FirstPage";
-//            }
-//            switch (op) {
-//                case "FirstPage":
-//                    page = 1;
-//                    break;
-//                case "PreviousPage":
-//                    if (page > 1) {
-//                        page--;
-//                    }
-//                    break;
-//                case "NextPage":
-//                    if (page < totalPage) {
-//                        page++;
-//                    }
-//                    break;
-//                case "LastPage":
-//                    page = totalPage;
-//                    break;
-//                case "GotoPage":
-//                    page = Integer.parseInt(request.getParameter("gotoPage"));
-//                    System.out.println(page);
-//                    if (page <= 0) {
-//                        page = 1;
-//                    } else if (page > totalPage) {
-//                        page = totalPage;
-//                    }
-//                    break;
-//            }
-//
-//            //Lay trang du lieu duoc yeu cau
-//            int n1 = (page - 1) * pageSize;//Vi tri mau tin dau trang
-//            List<Pitch> listP = pd.getPitch(n1, pageSize);
-//
-//            //Luu thong tin vao session va request
-//            session.setAttribute("page", page);
-//            session.setAttribute("totalPage", totalPage);
+
             int pageSize = 8;
             int n1;
             List<Pitch> listP = null;
@@ -328,57 +274,7 @@ public class HomeController extends HttpServlet {
                 int pageSize = 8;//Kich thuoc trang                        
                 int n1;
                 List<Pitch> listP = null;
-//                //Xac dinh so thu tu cua trang hien tai
-//                Integer page = (Integer) session.getAttribute("page");
-//                if (page == null) {
-//                    page = 1;
-//                }
-//
-//                //Xac dinh tong so trang
-//                Integer totalPage = (Integer) session.getAttribute("totalPage");
-//                int count = pd.getNumberOfPitchAterSearching(districtID, wardID);//Dem so luong records
-//                totalPage = (int) Math.ceil((double) count / pageSize);//Tinh tong so trang
-//
-//                String op = request.getParameter("op");
-//                if (op == null) {
-//                    op = "FirstPage";
-//                }
-//                switch (op) {
-//                    case "FirstPage":
-//                        page = 1;
-//                        break;
-//                    case "PreviousPage":
-//                        if (page > 1) {
-//                            page--;
-//                        }
-//                        break;
-//                    case "NextPage":
-//                        if (page < totalPage) {
-//                            page++;
-//                        }
-//                        break;
-//                    case "LastPage":
-//                        page = totalPage;
-//                        break;
-//                    case "GotoPage":
-//                        page = Integer.parseInt(request.getParameter("gotoPage"));
-//                        if (page <= 0) {
-//                            page = 1;
-//                        } else if (page > totalPage) {
-//                            page = totalPage;
-//                        }
-//                        break;
-//                }
-//
-//                //Lay trang du lieu duoc yeu cau
-//                int n1 = (page - 1) * pageSize;//Vi tri mau tin dau trang
-//                List<Pitch> listP = pd.getPitchAfterSearch(districtID, wardID, n1, pageSize);
 
-                //Luu thong tin vao session va request
-//                session.setAttribute("page", page);
-//                session.setAttribute("totalPage", totalPage);
-//                n1 = pagination(request, response, pd.getNumberOfPitchAterSearching(districtID, wardID));
-//                listP = pd.getPitchAfterSearch(districtID, wardID, n1, pageSize);
                 
 
                 List<Ward> listWard = pd.getAllWard();

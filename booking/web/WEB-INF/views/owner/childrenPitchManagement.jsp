@@ -1,8 +1,3 @@
-<%-- 
-    Document   : childrenPitchManagement
-    Created on : Jun 9, 2022, 10:27:45 AM
-    Author     : SE150853 Nguyen Huynh Minh Khoi
---%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>

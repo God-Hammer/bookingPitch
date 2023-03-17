@@ -21,10 +21,7 @@ import models.ChildrenPitch;
 import models.Time;
 import utils.DBUtils;
 
-/**
- *
- * @author SE150853 Nguyen Huynh Minh Khoi
- */
+
 public class BookingDAO {
 
     private static final String FIND_TIME = "SELECT * FROM Booking LEFT JOIN tblTime ON Booking.TimeID = tblTime.TimeID WHERE ChildrenPitchID = ? AND BookingDate = ? AND StatusBooking = 1;";
@@ -464,45 +461,7 @@ public class BookingDAO {
         }
         return list;
     }
-//    
-//    public List<Booking> getUserBookingPlayedEqual(String UserID, Date dateNow) throws SQLException {
-//        List<Booking> list = new ArrayList<>();
-//        Connection conn = null;
-//        PreparedStatement stm = null;
-//        ResultSet rs = null;
-//        try {
-//            conn = DBUtils.getConnection();
-//            if (conn != null) {
-//                stm = conn.prepareStatement(GET_USER_PLAYED_EQUAL);
-//                stm.setString(1, UserID);
-//                SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");
-//                stm.setString(2, df.format(dateNow));
-//                rs = stm.executeQuery();
-//                while (rs.next()) {
-//                    String bookingID = rs.getString("BookingID");
-//                    String childrenPitchID = rs.getString("ChildrenPitchID");
-//                    String userID = rs.getString("UserID");
-//                    Date bookingDate = rs.getDate("BookingDate");
-//                    String timeID = rs.getString("TimeID");
-//                    String timeRent = rs.getString("TimeRent");
-//                    list.add(new Booking(bookingID, childrenPitchID, userID, bookingDate, timeID, timeRent));
-//                }
-//            }
-//        } catch (Exception e) {
-//            System.out.println(e.getMessage());
-//        } finally {
-//            if (rs != null) {
-//                rs.close();
-//            }
-//            if (stm != null) {
-//                stm.close();
-//            }
-//            if (conn != null) {
-//                conn.close();
-//            }
-//        }
-//        return list;
-//    }
+
 
     public boolean deleteBooking(String bookingID, String reasonContent) throws SQLException {
         boolean check = false;

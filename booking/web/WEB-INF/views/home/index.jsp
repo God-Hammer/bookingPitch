@@ -1,8 +1,4 @@
-<%-- 
-    Document   : index
-    Created on : May 12, 2022, 11:11:51 AM
-    Author     : SE150853 Nguyen Huynh Minh Khoi
---%>
+
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
@@ -66,10 +62,7 @@
         </div>
     </section>
     <div class="px-4 px-lg-5 mb-3 container mx-auto" style="margin-top: -45px">
-        <!--    <div class="col-3"></div>-->
-        <!--    <div class="form-floating col-4 mt-5">
-                <select id="selectBox" name="district" onchange="ward()" class="form-select form-select-lg" id="floatingSelect" aria-label="Floating label select example" style="height: 70px">
-                    <option selected disabled value="">Quận</option>
+        
         <c:forEach var="d" items="${listD}" >
             <option ${district == d.districtID?"selected":""} value="${d.districtID}">${d.districtName}</option>
         </c:forEach>
@@ -119,8 +112,7 @@
                 <c:forEach var="p" items="${listP}" >
                     <div class="col mb-5">
                         <div class="card h-100">
-                            <!-- Sale badge-->
-                            <!--                                <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>-->
+                                                           
                             <!-- Product image-->
                             <img class="card-img-top" src="${pageContext.request.contextPath}/images/${p.pitchID}.jpg" alt="..." height="230px" />
                             <!-- Product details-->

@@ -1,8 +1,4 @@
-<%-- 
-    Document   : createPitch
-    Created on : Jun 30, 2022, 8:48:42 AM
-    Author     : SE150853 Nguyen Huynh Minh Khoi
---%>
+
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>

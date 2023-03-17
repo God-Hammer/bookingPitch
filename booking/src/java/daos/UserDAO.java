@@ -17,10 +17,7 @@ import models.Comment;
 import models.User;
 import utils.DBUtils;
 
-/**
- *
- * @author SE150853 Nguyen Huynh Minh Khoi
- */
+
 public class UserDAO {
 
     private static final String GET_USER = "SELECT * FROM tblUser where UserID=?";

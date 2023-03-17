@@ -14,10 +14,7 @@ import java.util.List;
 import models.ChildrenPitch;
 import utils.DBUtils;
 
-/**
- *
- * @author SE150853 Nguyen Huynh Minh Khoi
- */
+
 public class ChildrenPitchDAO {
 
     private static final String GET_CHILDRENPITCH = "SELECT * FROM ChildrenPitch";

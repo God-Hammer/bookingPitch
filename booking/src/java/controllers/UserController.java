@@ -36,10 +36,7 @@ import models.User;
 import models.UserGoogleDto;
 import models.Ward;
 
-/**
- *
- * @author SE150853 Nguyen Huynh Minh Khoi
- */
+
 @WebServlet(name = "UserController", urlPatterns = {"/user"})
 public class UserController extends HttpServlet {
 
@@ -354,25 +351,7 @@ public class UserController extends HttpServlet {
                     session.setAttribute("listCP1", listCP);
                     session.setAttribute("countN", listN.size());
                 }
-//                for (int i = 0; i < listN.size(); i++) {
-//                    for (int j = 0; j < listCP.size(); j++) {
-//                        for (int k = 0; k < listP.size(); k++) {
-//                            if (listN.get(i).getChildrenPitchID().equals(listCP.get(j).getChildrenPitchID()) && listCP.get(j).getPitchID().equals(listP.get(k).getPitchID())) {
-//                                System.out.println(listN.get(i).getBookingID());
-//                            }
-//                        }
-//
-//                    }
-//                }
-//                for (Booking booking : listN) {
-//                    for (ChildrenPitch ChildrenPitch : listCP) {
-//                        for (Pitch pitch : listP) {
-//                            if (booking.getChildrenPitchID().equals(ChildrenPitch.getChildrenPitchID()) && ChildrenPitch.getPitchID().equals(pitch.getPitchID())) {
-//                                System.out.println(booking.getBookingID());
-//                            }
-//                        }
-//                    }
-//                }
+
                 if (remember == null) {
                     Cookie[] cookies = request.getCookies();
                     // Delete all the cookies

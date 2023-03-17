@@ -30,10 +30,7 @@ import models.Pitch;
 import models.Time;
 import models.User;
 
-/**
- *
- * @author SE150853 Nguyen Huynh Minh Khoi
- */
+
 @WebServlet(name = "BookingController", urlPatterns = {"/booking"})
 public class BookingController extends HttpServlet {
 
