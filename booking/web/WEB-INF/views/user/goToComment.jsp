@@ -1,8 +1,4 @@
-<%-- 
-    Document   : comment
-    Created on : Jun 3, 2022, 10:31:29 AM
-    Author     : SE150853 Nguyen Huynh Minh Khoi
---%>
+
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <style>

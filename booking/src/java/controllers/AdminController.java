@@ -27,10 +27,7 @@ import models.SendEmail;
 import models.User;
 import models.Ward;
 
-/**
- *
- * @author SE150853 Nguyen Huynh Minh Khoi
- */
+
 @WebServlet(name = "AdminController", urlPatterns = {"/admin"})
 public class AdminController extends HttpServlet {
 

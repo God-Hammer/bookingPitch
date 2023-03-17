@@ -8,10 +8,7 @@ package models;
 import java.sql.Time;
 import java.util.Date;
 
-/**
- *
- * @author SE150853 Nguyen Huynh Minh Khoi
- */
+
 public class Booking {
     private String bookingID;
     private String childrenPitchID;

@@ -20,10 +20,7 @@ import models.Pitch;
 import models.Time;
 import utils.DBUtils;
 
-/**
- *
- * @author SE150853 Nguyen Huynh Minh Khoi
- */
+
 public class OwnerDAO {
 
     private static final String GET_PITCH_OF_OWNER = "SELECT * FROM Pitch WHERE UserID = ? AND PichStatus = 1";
@@ -129,46 +126,7 @@ public class OwnerDAO {
     }
     
 
-//    public List<Booking> findTime(String ChildrenPitchID, Date BookingDate, String UserID) throws SQLException {
-//        List<Booking> list = new ArrayList<>();
-//        Connection conn = null;
-//        PreparedStatement stm = null;
-//        ResultSet rs = null;
-//        try {
-//            conn = DBUtils.getConnection();
-//            if (conn != null) {
-//                stm = conn.prepareStatement(FIND_TIME);
-//                stm.setString(1, ChildrenPitchID);
-//                SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");
-//                stm.setString(2, df.format(BookingDate));
-//                stm.setString(3, UserID);
-//                rs = stm.executeQuery();
-//                while (rs.next()) {
-//                    String bookingID = rs.getString("BookingID");
-//                    String childrenPitchID = rs.getString("ChildrenPitchID");
-//                    String userID = rs.getString("UserID");
-//                    Date bookingDate = rs.getDate("BookingDate");
-//                    String timeID = rs.getString("TimeID");
-//                    java.sql.Time timeStart = rs.getTime("TimeStart");
-//                    java.sql.Time timeEnd = rs.getTime("TiemEnd");
-//                    list.add(new Booking(bookingID, childrenPitchID, userID, bookingDate, timeID, timeStart, timeEnd));
-//                }
-//            }
-//        } catch (Exception e) {
-//            System.out.println(e.getMessage());
-//        } finally {
-//            if (rs != null) {
-//                rs.close();
-//            }
-//            if (stm != null) {
-//                stm.close();
-//            }
-//            if (conn != null) {
-//                conn.close();
-//            }
-//        }
-//        return list;
-//    }
+
 
     public List<Booking> getUserBookingPlayedEqualBefore(Date dateNow, String Time, String UserID) throws SQLException {
         List<Booking> list = new ArrayList<>();

@@ -1,8 +1,4 @@
-<%-- 
-    Document   : login
-    Created on : May 15, 2022, 2:32:45 PM
-    Author     : SE150838 Le Quoc Khanh
---%>
+
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>

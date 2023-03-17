@@ -38,10 +38,7 @@ import models.Time;
 import models.User;
 import models.Ward;
 
-/**
- *
- * @author SE150853 Nguyen Huynh Minh Khoi
- */
+
 @WebServlet(name = "StadiumController", urlPatterns = {"/stadium"})
 public class StadiumController extends HttpServlet {
 

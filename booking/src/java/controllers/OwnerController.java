@@ -48,10 +48,7 @@ import org.apache.commons.fileupload.FileUploadException;
 import org.apache.commons.fileupload.disk.DiskFileItemFactory;
 import org.apache.commons.fileupload.servlet.ServletFileUpload;
 
-/**
- *
- * @author SE150853 Nguyen Huynh Minh Khoi
- */
+
 @MultipartConfig
 @WebServlet(name = "OwnerController", urlPatterns = {"/owner"})
 public class OwnerController extends HttpServlet {
@@ -206,21 +203,18 @@ public class OwnerController extends HttpServlet {
             ChildrenPitchDAO cpd = new ChildrenPitchDAO();
             Date dateNow = new Date();
             SimpleDateFormat smt = new SimpleDateFormat("HH:mm:ss");
-//            List<Pitch> listP = od.getPitch(userID);
-//            request.setAttribute("listP", listP);
+
             List<Pitch> listP = pd.getAllPitch();
             List<ChildrenPitch> listCP = cpd.getChildrenPitch();
             List<Time> listT = bd.getTime();
             List<Booking> listPlayedEqualAfter = od.getUserBookingPlayedEqualAfter(dateNow, smt.format(dateNow), userID);
             List<Booking> listPlayedEqualBefore = od.getUserBookingPlayedEqualBefore(dateNow, smt.format(dateNow), userID);
-//            List<Booking> listPlayedAfter = od.getUserBookingPlayedAfter(dateNow);
-//            List<Booking> listPlayedBefore = od.getUserBookingPlayedBefore(dateNow);
+
 
             request.setAttribute("listP", listP);
             request.setAttribute("listCP", listCP);
             request.setAttribute("listT", listT);
-//            request.setAttribute("listPlayedBefore", listPlayedBefore);
-//            request.setAttribute("listPlayedAfter", listPlayedAfter);
+
             request.setAttribute("listPlayedEqualAfter", listPlayedEqualAfter);
             request.setAttribute("listPlayedEqualBefore", listPlayedEqualBefore);
             request.setAttribute("userID", userID);
@@ -257,15 +251,11 @@ public class OwnerController extends HttpServlet {
             ChildrenPitchDAO cpd = new ChildrenPitchDAO();
             PitchDAO pd = new PitchDAO();
             User user = (User) session.getAttribute("user");
-//            String userID = request.getParameter("userID");
-//            String pitchID = request.getParameter("pitchID");
-//            String childrenPitchID = request.getParameter("childrenPitchID");
+
             String bookingDate = request.getParameter("dateBooking");
             Date date = new SimpleDateFormat("yyyy-MM-dd").parse(bookingDate);
 
-//            List<Pitch> listP = od.getPitch(userID);
-//            List<ChildrenPitch> listCP = od.getChildrenPitch(pitchID);
-//            List<Booking> listB = od.findTime(childrenPitchID, date);
+
             List<Pitch> listP = pd.getAllPitch();
             List<ChildrenPitch> listCP = cpd.getChildrenPitch();
             List<Time> listT = bd.getTime();
@@ -289,18 +279,13 @@ public class OwnerController extends HttpServlet {
             }
             request.setAttribute("listP", listP);
             request.setAttribute("listCP", listCP);
-//            request.setAttribute("listB", listB);
+
             request.setAttribute("listT", listT);
-//            request.setAttribute("listP", listP);
-//            request.setAttribute("listCP", listCP);
-//            request.setAttribute("pitchID", pitchID);
-//            request.setAttribute("cpID", childrenPitchID);
+
             request.setAttribute("dateBooking", bookingDate);
-//            request.setAttribute("userID", userID);
+
             request.setAttribute("action", "viewBooking");
-//            System.out.println(pitchID);
-//            System.out.println(childrenPitchID);
-//            System.out.println(bookingDate);
+
         } catch (SQLException ex) {
             Logger.getLogger(OwnerController.class.getName()).log(Level.SEVERE, null, ex);
         } catch (ParseException ex) {
@@ -380,7 +365,7 @@ public class OwnerController extends HttpServlet {
 
             List<ChildrenPitch> listCP = od.getChildrenPitchForOwner(userID);
             List<Pitch> listP = pd.getAllPitch();
-//            List<Pitch> listP = od.getPitch(userID);
+
 
             request.setAttribute("listP", listP);
             request.setAttribute("listCP", listCP);
@@ -390,24 +375,7 @@ public class OwnerController extends HttpServlet {
         }
     }
 
-//    private void viewChildrenPitch(HttpServletRequest request, HttpServletResponse response) {
-//        try {
-//            OwnerDAO od = new OwnerDAO();
-//
-//            String userID = request.getParameter("userID");
-//            String pitchID = request.getParameter("pitchID");
-////            List<ChildrenPitch> listCP = od.getChildrenPitch(pitchID);
-////            List<Pitch> listP = od.getPitch(userID);
-//
-//            request.setAttribute("pitchID", pitchID);
-//            request.setAttribute("userID", userID);
-//            request.setAttribute("listP", listP);
-//            request.setAttribute("listCP", listCP);
-//            request.setAttribute("action", "childrenPitchManagement");
-//        } catch (SQLException ex) {
-//            Logger.getLogger(OwnerController.class.getName()).log(Level.SEVERE, null, ex);
-//        }
-//    }
+
     private void viewEdit(HttpServletRequest request, HttpServletResponse response) {
         PrintWriter out = null;
         try {

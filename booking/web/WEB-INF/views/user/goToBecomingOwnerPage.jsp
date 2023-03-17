@@ -1,8 +1,4 @@
-<%-- 
-    Document   : goToBecomingOwnerPage
-    Created on : Jun 14, 2022, 2:32:37 PM
-    Author     : SE150853 Nguyen Huynh Minh Khoi
---%>
+
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>

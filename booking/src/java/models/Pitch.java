@@ -5,10 +5,7 @@
  */
 package models;
 
-/**
- *
- * @author SE150853 Nguyen Huynh Minh Khoi
- */
+
 public class Pitch {
     private String pitchID;
     private String wardID;

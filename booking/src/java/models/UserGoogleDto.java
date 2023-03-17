@@ -6,10 +6,7 @@ package models;
  * and open the template in the editor.
  */
 
-/**
- *
- * @author SE150853 Nguyen Huynh Minh Khoi
- */
+
 public class UserGoogleDto {
 
     private String id;
